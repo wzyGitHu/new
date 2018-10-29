@@ -1,0 +1,11 @@
+登录
+注册
+验证码   vericode
+获取验证码   checkveri
+修改密码     restpass
+退出登录     quit
+获取用户信息  returninfo
+获取用户列表  getadminlist
+编辑  edd
+删除  delete
+分页  查询

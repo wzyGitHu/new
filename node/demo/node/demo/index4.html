@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.12.4.js"></script>
+</head>
+<body>
+<!--<form action="http://127.0.0.1:3030" method="get">-->
+    姓名：<input type="text" name="username" id="user">
+    密码：<input type="text" name="password" id="pass">
+        <button class="btn">按钮</button>
+        <button id="text">安尼< /button>
+<!--</form>-->
+<script>
+    $(function(){
+        $(".btn").click(function(){
+            $.ajax({
+                url:"http://127.0.0.1:3600",
+                type:"get",
+                dataType:"jsonp",
+                data:{
+                    username:$("#user").val(),
+                    password:$("#pass").val()
+                }
+            }).done(function(result){
+                console.log("调用")
+            })
+        });
+        function showdata(data){
+            console.log(data);
+            var data=JSON.stringify(data);
+            $("#text").html(data)
+        }
+    })
+
+
+</script>
+</body>
+</html>
