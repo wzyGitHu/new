@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        #box{
+            /*overflow: hidden;*/
+            /*white-space: nowrap;*/
+            /*text-overflow: ellipsis;*/
+            width: 1200px;
+            height: auto;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box>ul>li{
+            float: left;
+            width: 260px;
+            padding: 20px;
+            list-style: none;
+        }
+        #box>ul>li img{
+            width: 260px;
+            height: auto;
+        }
+        #box>ul>li>p:nth-child(2){
+            height: 40px;
+            line-height: 40px;
+        }
+        #box>ul>li>p:nth-child(2)>span:first-child{
+            width: 100px;
+            float: left;
+            line-height: 40px;
+        }
+        #box>ul>li>p:nth-child(2)>span:last-child{
+            float: right;
+            line-height: 40px;
+            width: 100px;
+            text-align: right;
+        }
+        #box>ul>li>p:nth-child(3){
+            width: 260px;
+            height: 30px;
+            line-height: 30px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    </style>
+    <script src="ajax.js"></script>
+</head>
+<body>
+<div id="box">
+    <ul>
+        <!--<li>-->
+            <!--<img src="../../img/list_3.jpg" alt="">-->
+        <!--<p>-->
+            <!--<span>￥199.00</span>-->
+            <!--<span>❤6666</span>-->
+        <!--</p>-->
+            <!--<p>衣服好看暗杀可丢去外地赌球网文档我的文档文档</p>-->
+        <!--</li>-->
+
+    </ul>
+</div>
+<script>
+    var oBox=document.getElementById('box');
+        oUl=oBox.getElementsByTagName('ul')[0];
+    ajax("deta/meilishuo.json",function(data){
+        var _data=eval("("+data+")");
+        for (var i = 0; i < _data.length; i++) {
+            aLi=document.createElement('li');
+            oUl.appendChild(aLi);
+            aImg=document.createElement('img');
+            aLi.appendChild(aImg);
+            oP1=document.createElement('p');
+            aLi.appendChild(oP1);
+            oP2=document.createElement('p');
+            aLi.appendChild(oP2);
+            oSpan1=document.createElement('span');
+            oP1.appendChild(oSpan1);
+            oSpan2=document.createElement('span');
+            oP1.appendChild(oSpan2);
+            aImg.src=_data[i].img;
+            oP2.innerHTML=_data[i].jieshao;
+            oSpan1.innerHTML="￥"+_data[i].price;
+            oSpan2.innerHTML="❤"+_data[i].hot;
+        }
+    })
+</script>
+</body>
+</html>

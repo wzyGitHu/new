@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery.js"></script>
+    <style>
+        select{
+            width: 100px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+<!--toggle 切换 -->
+<select name="" id="sel" size="2">
+    <option>西瓜</option>
+    <option>苹果</option>
+    <option>香蕉</option>
+    <option>鸭梨</option>
+    <option>黄瓜</option>
+</select>
+<input type="button" value=">>" id="btn">
+<select name="" id="sel2" size="2"></select>
+</body>
+<script>
+    $("#btn").click(function(){
+        $("#sel option:selected").clone().appendTo("#sel2")
+    })
+</script>
+</html>

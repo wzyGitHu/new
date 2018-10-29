@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        #list{
+            margin: 100px auto;
+            position: relative;
+            background: #eee;
+        }
+        #list li{
+            list-style: none;
+            line-height: 50px;
+            font-size: 30px;
+            text-align: center;
+            border-bottom: 2px solid #33ffff;
+            background: #fff;
+        }
+        button{
+            width: 200px;
+            height: 50px;
+            display: block;
+            margin: 0 auto;
+        }
+        span{
+            width: 50px;
+            height: 50px;
+            float: right;
+            border-radius: 50px;
+            background: #000;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+    <script src="../../jquery-1.8.3/jquery.js"></script>
+</head>
+<body>
+
+        <ul id="list">
+
+
+            <li>呵呵 <span>X</span></li>
+            <li>呵呵 <span>X</span></li>
+            <li>呵呵 <span>X</span></li>
+            <li>呵呵 <span>X</span></li>
+            <li>呵呵 <span>X</span></li>
+            <li>呵呵 <span>X</span></li>
+
+
+
+
+
+        </ul>
+
+        <button>按钮</button>
+
+
+
+    <script>
+       // window.onload = function () {   //只能写一个
+       //      //加载完毕执行内容
+       //
+       // }
+       //
+       // $(document).ready(function(){   //能写多个
+       //     ///加载完毕执行内容
+       //
+       // })
+       //
+       //  //简化版
+       //
+       // $(function(){                 //能写多个
+       //     ///加载完毕执行内容
+       //
+       //
+       // })
+
+
+
+       //2.事件处理  bind();		unbind();		one()
+       //
+       // $('button').one("click",function () {        //只起一次作用
+       //
+       //     $("span").unbind("click")                //解除bind绑定的事件
+       //
+       //
+       //     $("#list").append($("<li> haha    <span>X</span>   </li>"))
+       //
+       //
+       //  })
+       //
+       //  $("span").bind("click",function () {
+       //
+       //      $(this).parent().remove()               //bind绑定事件
+       //
+       //  })
+
+
+
+        //3.事件委派    live();  		die()
+
+
+       $('button').on("click",function () {
+
+           $("#list").append($("<li> haha    <span>X</span>   </li>"))
+
+           $("span").die("click")     //解除live事件
+
+
+       })
+
+       $("span").live("click",function () {         //未来元素也起作用
+
+           $(this).parent().remove()
+
+       })
+
+        //4.事件切换  hover();		toggle();
+
+
+
+       $("li").hover(
+           function () {
+                $(this).css("background","#f00")
+           },
+           function () {
+                $(this).css("background","#fff")
+           }
+       )
+
+       $("li").toggle(
+           function () {
+                $(this).css("background","#ff0")
+           },
+           function () {
+                $(this).css("background","#0f0")
+           },
+           function () {
+                $(this).css("background","#f0f")
+           }
+       )
+
+
+    </script>
+
+</body>
+</html>

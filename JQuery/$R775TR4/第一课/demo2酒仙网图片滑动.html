@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.8.3/jquery.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 微软雅黑;
+
+        }
+        .jiu{
+            width: 200px;
+            overflow: hidden;
+            float: left;
+            margin: 0px 20px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="jiu">
+        <img class="aaa" src="../img/jiu.png" />
+    </div>
+    <div class="jiu">
+        <img class="aaa" src="../img/jiu.png" />
+    </div>
+    <div class="jiu">
+        <img class="aaa" src="../img/jiu.png" />
+    </div>
+    <div class="jiu">
+        <img class="aaa" src="../img/jiu.png" />
+    </div>
+    <div class="jiu">
+        <img class="aaa" src="../img/jiu.png" />
+    </div>
+    <div class="jiu">
+        <img class="aaa" src="../img/jiu.png" />
+    </div>
+    <div class="jiu">
+        <img class="aaa" src="../img/jiu.png" />
+    </div>
+    <div class="jiu">
+        <img class="aaa" src="../img/jiu.png" />
+    </div>
+    <div class="jiu">
+        <img class="aaa" src="../img/jiu.png" />
+    </div>
+    <div class="jiu">
+        <img class="aaa" src="../img/jiu.png" />
+    </div>
+    <div class="jiu">
+        <img class="aaa" src="../img/jiu.png" />
+    </div>
+
+
+<script>
+
+
+
+    $("img").hover(
+        function () {
+            // $(this).css({"margin-left":"-50px"})
+
+            $(this).animate({"margin-left":"-50px"},1000)
+        },
+        function () {
+            $(this).animate({"margin-left":"0px"},1000)
+        }
+    )
+
+
+
+
+
+    // $("img").hover(
+    //     function(){
+    //         $(this).animate({"margin-left":"-60px"},500)
+    //     },
+    //     function(){
+    //         $(this).animate({"margin-left":"0px"},500)
+    //     }
+    // )
+
+</script>
+
+</body>
+</html>

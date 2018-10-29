@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.8.3/jquery.min.js"></script>
+</head>
+<body>
+
+    <h1>aaaaaaaaaaaaaaaaa</h1>
+    <h1 class="haha" id="haha">bbbbbbbbbbbbbbbbb</h1>
+    <h1 class="haha">cccccccccccccccc</h1>
+    <h1>dddddddddddddddddd</h1>
+
+
+
+    <script>
+
+        /*
+        * js对象和jquery对像的相互转换
+        * jq => js
+        *   1,加中括号给下标   例如：$(".haha")[0]
+        *   2, .get(0)
+        *
+        * js => jq
+        *   加上$()     例如：$(oHaha)
+        *
+        * */
+
+
+        var oHaha = document.getElementById("haha");
+
+        // oHaha.setAttribute("name","宇宙无敌第一帅")
+
+
+        // $(".haha")[1].setAttribute("name","宇宙无敌第一帅")
+
+
+        // $(".haha").get(0).setAttribute("name","宇宙无敌第一帅")
+
+
+
+
+        // $("#haha").attr("name","宇宙无敌第一帅")
+
+
+        $(oHaha).attr("name","宇宙无敌第一帅")
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script src="../jquery.js"></script>
+</head>
+<body>
+<ul id="list">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li class="li1">6</li>
+    <li>7</li>
+    <li>8</li>
+</ul>
+<!--//append() appenfTo()  prepend()  prependTo()-->
+<script>
+//    $(".li1").append("<span>我是插入的</span>");
+//    $("<span>我是插入的</span>").appendTo($('.li1'));
+
+//    $(".li1").prepend("<span>我是插入的</span>");
+    $("<span>我是插入的</span>").prependTo($('.li1'));
+</script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../jquery-1.8.3/jquery.min.js"></script>
+    <style>
+        *{
+            font-family: 微软雅黑;
+            margin: 0;
+            padding: 0;
+        }
+        ul li{
+            list-style: none;
+            line-height: 50px;
+            border-bottom: 2px solid #33ffff;
+            text-align: center;
+            font-size: 30px;
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <ul>
+        <li id="li1">1</li>
+        <li class="li2">2</li>
+        <li>3
+            <p>333</p>
+            <h1>3333</h1>
+            <div>
+                <h1>div-h1</h1>
+                <p>div-p</p>
+            </div>
+
+        </li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+
+        <h1>h1</h1>
+        <h2>h2</h2>
+        <p>p</p>
+    </ul>
+
+
+
+    <script>
+       //2.层级		(ancestor descendant / parent > child / prev + next / prev ~ siblings)
+
+
+       // 空格    =>    后代
+       // >      =>     子代
+       // +      =>     下一个兄弟元素
+       // ~      =>     后面的所有兄弟元素
+
+        // $("ul p").css({"background":"#ff0"})
+
+        // $("ul > p").css({"background":"#ff0"})
+
+        // $("#li1 + li").css({"background":"#ff0"})
+
+        // $(".li2~li").css({"background":"#ff0"})
+
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>

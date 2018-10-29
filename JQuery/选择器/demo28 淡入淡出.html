@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div{
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            background: mediumvioletred;
+            opacity: 0;
+        }
+        button{
+            width: 50px;
+            height: 40px;
+            margin: 10px auto;
+        }
+    </style>
+    <script src="../jquery.js"></script>
+</head>
+<body>
+<button>按钮</button>
+<div id="div"></div>
+<script>
+            var a=0;
+        $("button").on('click',function(){
+//            if(a%2==0){
+//                $('#div').fadeOut(500)//淡入
+//            }else {
+//                $('#div').fadeIn(500)//淡出
+//            }
+//            a++
+            $('#div').fadeTo('show',1,function(){
+                $("#div").css("opacity","1")
+//                $("#div").slideUp(5000)
+            })
+
+    })
+</script>
+</body>
+</html>

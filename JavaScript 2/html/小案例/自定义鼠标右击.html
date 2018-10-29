@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #ul{
+            display: none;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<ul id="ul">
+    <li>电视剧额防伪码Joi我</li>
+    <li>电视剧额防伪码Joi我</li>
+    <li>电视剧额防伪码Joi我</li>
+    <li>电视剧额防伪码Joi我</li>
+</ul>
+<script>
+window.onload=function(){
+    //鼠标菜单键
+    //oncontextmenu事件;用户右击鼠标是触发并打开上下文菜单
+    var oUl=document.getElementById('ul');
+
+    document.oncontextmenu=function(ev){
+        var oEvent=ev||event;
+        oUl.style.display='block';
+        oUl.style.left=oEvent.clientX+'px';
+        oUl.style.top=oEvent.clientY+'px';
+        return false;//阻止事件的默认行为，会把冒泡传播都阻止
+    };
+    document.onclick=function(){
+        oUl.style.display='none';
+    }
+}
+
+
+
+
+
+</script>
+</body>
+</html>

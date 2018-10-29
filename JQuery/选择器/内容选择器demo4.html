@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        li{
+            height: 30px;
+        }
+    </style>
+    <script src="../jquery.js"></script>
+</head>
+<body>
+<!--:empty  :has    :parent-->
+<ul>
+    <li></li>
+    <li>sadsad</li>
+    <li>sadsad</li>
+    <li>sadsad</li>
+    <li>sadsad</li>
+    <li><p></p></li>
+</ul>
+<script>
+//    $("li:empty").css("background","#f0f");匹配所有不包含子元素或者文本的空元素
+    $("li:has(p)").css("background","#f0f");//匹配含有选择器所匹配的元素的元素（匹配含有某个元素的）
+//    $("li:parent").css("background","#f0f");//匹配含有选择器所匹配的元素的元素（匹配非空的）
+</script>
+</body>
+</html>

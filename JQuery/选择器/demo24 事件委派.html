@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        li{
+            height: 30px;
+            width: 100%;
+        }
+        span{
+            width: 100px;
+            height: 30px;
+            background: red;
+            display: block;
+            float: right;
+        }
+    </style>
+    <script src="../jquery.js"></script>
+</head>
+<body>
+<button>按钮</button>
+<ul id="list">
+    <li>sd <span>sa</span></li>
+    <li>sda <span>sa</span></li>
+    <li>sda</li>
+    <li>sda</li>
+    <li>sda</li>
+</ul>
+<script>
+    $('button').on('click',function(){
+        $("#list").append($("<li>haha <span>X</span></li>"))
+        $("span").die("click")//解除live事件
+    })
+    $("span").live("click",function(){//未来元素也起作用
+        $(this).parent().remove()
+    })
+</script>
+</body>
+</html>

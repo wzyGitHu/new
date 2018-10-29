@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            width: 100%;
+            height: 100%;
+            background: #00CC00;
+        }
+        *{
+            margin:0;
+            padding: 0;
+        }
+        ul li{
+           list-style: none;
+            float: left;
+            margin: 10px;
+            width: 100px;
+            height: 100px;
+            background: #fff;
+            overflow: hidden;
+            position: relative;
+        }
+        span{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            display: block;
+            background: #00f8ff;
+            transition: all .5s;
+
+        }
+
+    </style>
+    <script src="../jquery.js"></script>
+</head>
+<body>
+<div>
+    <ul>
+        <li><span></span></li>
+        <li><span></span></li>
+        <li><span></span></li>
+        <li><span></span></li>
+        <li><span></span></li>
+        <li><span></span></li>
+        <li><span></span></li>
+        <li><span></span></li>
+        <li><span></span></li>
+        <li><span></span></li>
+    </ul>
+</div>
+<script>
+    $("span").hover(function(){
+        $(this).animate({"left":"-20px"},500)
+    },function(){
+        $(this).animate({"left":"0px"},500)
+    })
+</script>
+</body>
+</html>

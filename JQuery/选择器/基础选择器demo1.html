@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        li{
+            height: 50px;
+            width: 100%;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <script src="../jquery.js"></script>
+</head>
+<body>
+<!--#id  element  .calss  * -->
+<ul>
+    <li id="li1">sd a</li>
+    <li class="li2">asd weee</li>
+    <li>sd ss</li>
+    <li>sd ss</li>
+    <li>sd ss</li>
+</ul>
+<script>
+
+    $("li").css({"background":"#eee"});
+    $("#li1").css({"background":"#ff0"});
+    $(".li2").css({"background":"#f00"});
+    $("*").css({"border":"1px solid #f0f"});
+</script>
+</body>
+</html>

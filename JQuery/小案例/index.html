@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            background: #d03b34;
+            position: absolute;
+            width: 200px;
+            height: 200px;
+        }
+
+    </style>
+    <script src="../jquery.js"></script>
+</head>
+<body>
+<div class="div"></div>
+<script>
+$(".div").toggle(function(){
+    $(this).css("background","yellow")
+},function(){
+    $(this).css("background","#d03b34")
+})
+</script>
+</body>
+</html>

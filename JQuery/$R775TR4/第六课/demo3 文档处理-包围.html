@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        #list li{
+            list-style: none;
+            line-height: 50px;
+            font-size: 30px;
+            text-align: center;
+            border-bottom: 2px solid #33ffff;
+        }
+    </style>
+    <script src="../../jquery-1.8.3/jquery.js"></script>
+</head>
+<body>
+
+        <ul id="list">
+            <li>0</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li class="seven">7</li>
+            <li class="eight">8</li>
+            <li>9</li>
+            <li>10</li>
+            <li>11</li>
+            <li>12</li>
+            <li>13</li>
+            <li>14</li>
+        </ul>
+
+
+
+    <script>
+        //3.包围： wrap();		wrapInner();     wrapAll();
+
+        // $("li").wrap("<span></span>")     //外包围
+        $(".seven").wrapInner("<span></span>")  //内包围
+        $("li").wrapAll("<span></span>")    //全包围
+
+    </script>
+
+</body>
+</html>

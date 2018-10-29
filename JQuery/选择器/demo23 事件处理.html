@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        li{
+            height: 30px;
+        }
+        span{
+            width: 100px;
+            height: 30px;
+            background: #e83632;
+            display: inline-block;
+        }
+    </style>
+    <script src="../jquery.js"></script>
+</head>
+<body>
+<button>按钮</button>
+<ul id="list">
+    <li>0 <span>商城</span></li>
+    <li>1 <span>商城</span></li>
+    <li>2 <span>商城</span></li>
+    <li>3 <span>商城</span></li>
+    <li>4 <span>上单</span></li>
+</ul>
+<script>
+//    bind()  unbind()    one()
+//    $("button").one("click",function(){//只起一次作用
+//        $("span").unbind("click")//解除bind绑定的事件
+//        $("#list").append($("<li>haha<span>X</span></li>"))
+//    })
+//    $("span").bind('click',function(){
+//        $(this).parent().remove()//bind绑定事件
+//    })
+</script>
+</body>
+</html>

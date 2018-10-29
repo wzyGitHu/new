@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.8.3/jquery.min.js"></script>
+</head>
+<body>
+     <div>
+        <img id="img" src="../img/1.jpg" />
+    </div>
+
+
+    <script>
+        window.onload = function(){
+
+
+            // var Oimg = document.getElementById("img");
+            //
+            // var a = 0;
+            //
+            // Oimg.onclick = function () {
+            //     // if(a==0){
+            //     //     this.src = "../img/2.jpg"
+            //     //     a = 1;
+            //     // }else{
+            //     //     this.src = "../img/1.jpg"
+            //     //     a = 0;
+            //     // }
+            //
+            //
+            //
+            //     if(a%2==0){
+            //         this.src = "../img/2.jpg"
+            //     }else{
+            //         this.src = "../img/1.jpg"
+            //     }
+            //
+            //     a++
+            //
+            // }
+
+
+
+            // var b=0;
+            // $("#img").on("click",function () {
+            //
+            //     if(b%2==0){
+            //         this.src = "../img/2.jpg";
+            //     }else{
+            //         this.src = "../img/1.jpg";
+            //     }
+            //
+            //
+            //     // $(this).attr("src","../img/2.jpg")
+            //     b++
+            // })
+
+
+            //toggle   切换
+            $("#img").toggle(
+                function () {
+                    this.src = "../img/1.jpg";
+                },
+                function () {
+                    this.src = "../img/2.jpg";
+                },
+                function () {
+                    this.src = "../img/3.jpg";
+                },
+                function () {
+                    this.src = "../img/4.jpg";
+                },
+                function () {
+                    this.src = "../img/5.jpg";
+                },
+                function () {
+                    this.src = "../img/6.jpg";
+                }
+            )
+
+
+
+
+
+
+
+            //var i =0;
+            // //方法1(JS)
+            // Oimg.onclick = function(){
+            //     if(i%2==0){
+            //         Oimg.src="../img/2.jpg"
+            //     }else {
+            //         Oimg.src="../img/1.jpg"
+            //     }
+            //     i++;
+            //     console.log(i)
+            //     console.log(i%2)
+            // }
+            //
+            // //方法2(JS)
+            // Oimg.onclick = function(){
+            //     if(i==0){
+            //         Oimg.src="../img/2.jpg";
+            //         i=1;
+            //     }else{
+            //         Oimg.src="../img/1.jpg";
+            //         i=0;
+            //     }
+            // }
+            //
+            // //方法3（jquery）
+            // $("#img").toggle(
+            //     function(){
+            //         this.src="../img/2.jpg"
+            //     },
+            //     function(){
+            //         this.src="../img/1.jpg"
+            //     }
+            // );
+
+
+
+
+
+        }
+    </script>
+</body>
+</html>

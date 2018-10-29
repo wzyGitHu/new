@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 楷体;
+            font-size: 30px;
+
+        }
+        body{
+            height: 2000px;
+        }
+        input{
+            display: block;
+            width: 200px;
+            height: 60px;
+
+        }
+
+    </style>
+
+    <script src="../../jquery.js"></script>
+</head>
+<body>
+<!-- blur(fn) -->
+<!--<input class="input1" type="text"/>-->
+<!--<script>-->
+<!--$(".input1").blur(function(){-->
+<!--alert("已失去焦点")-->
+<!--})-->
+<!--</script>-->
+
+<!-- focus(fn) -->
+<!--<input class="input1" type="text"/>-->
+<!--<script>-->
+<!--$(".input1").focus(function(){-->
+<!--alert("已获得焦点")-->
+<!--})-->
+<!--</script>-->
+
+
+<!-- select(fn)-->
+<!--<input class="input1" type="text" value="132465798"/>-->
+<!--<script>-->
+<!--$(".input1").select(function(){-->
+<!--alert("文本被已选择")-->
+<!--})-->
+<!--</script>-->
+
+<!-- submit(fn) -->
+ <!--   <form>
+        <input class="input1" type="text" value="132465798"/>
+        <input class="btn" type="submit" value="提交"/>
+        <input class="btn" type="button" value="按钮"/>
+    </form>
+    <script>
+        $("form").submit(function(){
+            alert("提交表单了")
+        })
+    </script>-->
+
+<!-- change(fn) -->
+    <!--<input class="input2" type="text"/>-->
+    <!--<select class="select1">-->
+        <!--<option>123</option>-->
+        <!--<option>345</option>-->
+        <!--<option>678</option>-->
+        <!--<option>910</option>-->
+    <!--</select>-->
+    <!--<script>-->
+        <!--$(".input2").change(function(){-->
+            <!--alert("已改变值")-->
+        <!--})-->
+        <!--$(".select1").change(function(){-->
+            <!--alert("已改变选中")-->
+        <!--})-->
+    <!--</script>-->
+
+
+<!-- click(fn) -->
+<!--    <p>点击我啊！！</p>
+    <script>
+        $("p").click(function(){
+            alert("我被点击了！这可咋整啊？？")
+        })
+    </script>-->
+
+<!-- dblclick(fn) -->
+<!--    <p>双击我啊！！</p>
+    <script>
+        $("p").dblclick(function(){
+            alert("我被双击了！这是觉得我很666666么？")
+        })
+    </script>-->
+
+<!-- keydown(fn) keypress(fn) -->
+<!--<script>-->
+<!--$(window).keydown(function(){-->
+<!--alert("键盘或按钮已被按下")-->
+<!--});-->
+<!--</script>-->
+
+<!-- keyup(fn) -->
+<!--    <script>
+        $(window).keyup(function(){
+            alert("键盘或按钮已被抬起")
+        });
+    </script>-->
+
+<!-- mouseenter(fn) mousedown(fn) mouseleave(fn)  mousemove(fn) -->
+<!--<div style="width: 200px;height: 200px;background: #f00;">我是一个可爱的 DIV</div>-->
+<script>
+    //        $("div").mouseenter(function(){
+    //            alert("鼠标已经划入我了")
+    //        });
+
+    //        $("div").mousedown(function(){
+    //            alert("已经按下鼠标按键")
+    //        });
+
+    //        $("div").mouseleave(function(){
+    //            alert("鼠标已经划出我的领地范围了")
+    //        });
+
+    //        $("div").mousemove(function(){
+    //            alert("鼠标正在我身上疯狂的滑动啊！！！！！")
+    //        });
+</script>
+
+<!-- mouseout(fn) mouseup(fn)  mouseover(fn)  -->
+<!--<div style="width: 200px;height: 200px;background: #f00;">我是一个可爱的 DIV</div>-->
+<script>
+    //        $("div").mouseout(function(){
+    //            alert("鼠标已出我领空")
+    //        });
+    //        $("div").mouseup(function(){
+    //            alert("已经松开鼠标了")
+    //        });
+    //        $("div").mouseover(function(){
+    //            alert("鼠标已入我领空")
+    //        });
+</script>
+
+<!-- resize(fn) scroll(fn)  -->
+<!--<div style="width: 200px;height: 2000px;background: #f00;">我是一个可爱的 DIV</div>-->
+<script>
+    //        $(window).resize(function(){
+    //            alert("浏览器窗口的大小发生了改变")
+    //        });
+            $(window).scrollTop(function(){
+                console.log(window)
+            });
+</script>
+
+<!-- unload(fn)  -->
+<!--<a href="http://www.baidu.com">我要走了</a>-->
+<!--<script>-->
+<!--$(window).unload( function () {-->
+<!--alert("Bye now!");-->
+<!--} );-->
+<!--</script>-->
+
+
+
+</body>
+</html>

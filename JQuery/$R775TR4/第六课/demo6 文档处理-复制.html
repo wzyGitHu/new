@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        #list li{
+            list-style: none;
+            line-height: 50px;
+            font-size: 30px;
+            text-align: center;
+            border-bottom: 2px solid #33ffff;
+            float: left;
+            margin-left: 50px;
+        }
+        #list li img{
+            list-style: none;
+            line-height: 50px;
+            font-size: 30px;
+            text-align: center;
+            border-bottom: 2px solid #33ffff;
+        }
+    </style>
+    <script src="../../jquery-1.8.3/jquery.js"></script>
+</head>
+<body>
+
+        <ul id="list">
+            <li>0</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+        </ul>
+
+
+
+    <script>
+        //1.内部插入
+        //append();	  appendTo(); 	  prepend();		prependTo();
+
+
+        $('.seven').append("<span>我是插入的span</span>")
+
+        $("<span>我是插入的span</span>").appendTo($('.eight'))
+
+
+        $('.seven').prepend("<span>我是插入的span</span>")
+
+        $("<span>我是插入的span</span>").prependTo($('.eight'))
+
+
+
+    </script>
+
+</body>
+</html>

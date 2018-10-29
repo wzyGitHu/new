@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width: 800px;
+            height: auto;
+            background: rebeccapurple;
+        }
+
+    </style>
+    <script src="../jquery.js"></script>
+</head>
+<body>
+<button>按钮</button>
+<div id="box"></div>
+<script>
+    var a=0;
+//    $("button").on('click',function(){
+//        $.get("../js/text",function(data){
+//            console.log(data);
+//            a++;
+//            var pp=$("<p>"+data+"---"+a+"</p>")
+//            $("#box").append(pp)
+//        })
+//
+//    })
+
+//    $.ajax()
+//    $.get()
+//    $.post
+//    格式：get/post
+//    $.get(url,[data],[callback],[type])
+//    url:带载入页面的URL地址
+//    data：带发送Key/value参数
+//    callback：载入成功时回调函数
+//    type：返回内容模式，xml,html, script,json,tex()t,_default
+
+//    $('button').on("click",function(){
+//        a++
+//        $.get("../js/text",{"id":1},function(data){
+//            console.log(data)
+//            $("#box").append("<p>"+data+"---"+a+"</p>")
+//        },"text")
+//    })
+
+    $('button').on("click",function(){
+        a++
+        $.get("../js/listData.json",{"id":1},function(data){
+            console.log(data)
+            var _data=eval(data);
+            $.each(_data,function(i){
+                var oList=_data[i].data.list;
+                console.log(oList)
+                $.each(oList,function(j){
+                    var oImg=$("<img src='"+oList[j].coverImg+"'/>")
+                    $("#box").append(oImg)
+                })
+            })
+        },"json")
+    })
+</script>
+</body>
+</html>
