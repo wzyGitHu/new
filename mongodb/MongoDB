@@ -1,0 +1,38 @@
+use   使用数据库（如果有就切换）
+show dbs：查询数据库数量
+删除数据库：db.dropDatabase<>
+db.getName() 查看当前使用数据库是哪个
+show collections    显示当前数据库里的集合
+db.test2.find()      查看集合内容
+db.mycol2.remove    删除集合内数据
+db  输出当前数据库
+db.test2.insertMany([{"username":"jack","age":20},{"username":"ross","age":20}]) 加入多个
+db.test2.insertOne()    加入一个
+创建集合：db.createCollection(“集合名”)
+增 insert  db.集合名（如果该集合名已经存在，那么插入的数据在此基础上递增,如果集合名不存在就
+新增集合名）.insert({})
+删   db.mycol2.drop()    删除集合    db.集合名.remove({})空对象删除所有  里面有具体数据就删除具体的
+查   db.test2.find()      查看集合内容 db.test2.find().pretty()格式化
+db.col.find().limit(2)截取    根据参数截取数据对应的个数
+db.col.find().skip(2)   跳过当前数据查询后面数据  案例（分页）
+db.col.find({$or:[{"age":20},{"age":18}]})      或
+db.col.find({$and:[{"age":20},{"age":18}]})     并且
+$gt大于 $lt小于 $gte大等于 $lte小等于 $ne不等于
+改   db.col.update({},{$set{}})
+db.col.update({'title':'MongoDB 教程'},{$set:{'title':'MongoDB'}},{multi:true})
+以上语句只会修改第一条发现的文档，如果你要修改多条相同的文档，则需要设置 multi 参数为 true。
+db.test1.find().sort({"likes":1})   排序 1正序 -1倒序
+mongodb  数据库
+跨平台  面向对象轻量级的数据库        文档和集合
+数据库的类型：
+关系型数据库      菲关系型数据库
+启动数据库：
+mongod --dbpath="d:/mongodb/data"
+mongo
+
+集合：数据库的一种
+文档：document   {
+                id：“1”，
+                username：“name”
+                    }
+
