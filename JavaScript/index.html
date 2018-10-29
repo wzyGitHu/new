@@ -1,0 +1,25 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <title>获取事件的目标</title>
+    <meta/>
+    <script type="text/javascript">
+        function handle(e){
+            e = e || window.event;//处理兼容，获取事件对象
+            var oTarget = e.tagName || e.srcElement;//处理兼容，获取事件目标
+            alert(oTarget.tagName);
+        }
+        window.onload = function(){
+            var oP = document.getElementsByTagName("p")[0];
+            oP.onclick=handle;
+        }
+    </script>
+</head>
+
+<body>
+
+<p>获取事件目标:我是目标。</p>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html,body{
+            width: 100%;
+            height: auto;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+    </style>
+</head>
+<body>
+<button id="btn1">按钮1</button>
+<button id="btn2">按钮2</button>
+<button id="btn3">按钮3</button>
+<script>
+    var oBt1=document.getElementById('btn1');
+    var oBt2=document.getElementById('btn2');
+    var oBt3=document.getElementById('btn3');
+    oBt1.onclick=function(){
+        localStorage.setItem("a","A");
+        window.location.href='demo2.html';
+    }
+    oBt2.onclick=function(){
+        localStorage.setItem("a","B");
+        window.location.href='demo2.html';
+
+    }
+    oBt3.onclick=function(){
+        localStorage.setItem("a","C");
+        window.location.href='demo2.html';
+
+    }
+//    var IPhone=/^1[3|4|5|7|8][0-9]{9}$/;
+</script>
+</body>
+</html>

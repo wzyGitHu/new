@@ -1,0 +1,60 @@
+
+2018/7/18 22:31:07
+渡 2018/7/18 22:31:07
+
+2018/7/20 0:02:45
+渡 2018/7/20 0:02:45
+
+2018/7/23 20:26:01
+渡 2018/7/23 20:26:01
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            width:100%;
+            height:auto;
+        }
+        #box{
+            width:1200px;
+            height:500px;
+            margin: 0 auto;
+            background-color: #00a0e9;
+            position: relative;
+        }
+        #box>#boxS{
+            width:200px;
+            height: 200px;
+            background-color: yellow;
+            position: absolute;
+            top:150px ;
+            right:-200px;
+            opacity: 0;
+        }
+        @keyframes an1 {
+            0%{transform:translateX(0px);}
+            0%{opacity: 0}
+            50%{transform:translateX(-800px);}
+            50%{opacity:1;}
+            100%{transform:translateX(-1600px);}
+            100%{opacity:0;}
+        }
+        #box:hover #boxS{
+            animation: an1 2s ;
+        }
+    </style>
+</head>
+<body>
+<div class="box" id="box">
+    <div class="boxS" id="boxS"></div>
+</div>
+</body>
+<script>
+</script>
+</html>

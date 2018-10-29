@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<video id="video1" controls="controls" src="音视频/mov_bbb.mp4"></video>
+<audio src="音视频/song.ogg" id="audio"></audio>
+<button>开始</button>
+<button>结束</button>
+<script>
+    var myVid=document.getElementById("video1");
+    var myaid=document.getElementById("audio");
+    var oBtn1=document.getElementsByTagName('button')[0];
+    var oBtn2=document.getElementsByTagName('button')[1];
+//    oBtn1.onclick=function(){
+//       myVid.play();
+//   }
+//    oBtn2.onclick=function(){
+//        myVid.pause();
+//    }
+    oBtn1.onclick=function(){
+        myVid.play();
+    };
+    oBtn2.onclick=function(){
+        myVid.pause();
+    }
+</script>
+</body>
+</html>

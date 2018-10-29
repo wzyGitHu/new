@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            height: auto;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<script>
+    var bianliang=localStorage.getItem('a');
+    var oBody=document.getElementsByTagName('body')[0];
+    if(bianliang=="A"){
+        oBody.style.background='red';
+    }
+    if(bianliang=="B"){
+        oBody.style.background='blue';
+    }
+    if(bianliang=="C"){
+        oBody.style.background='yellow';
+    }
+</script>
+</body>
+</html>

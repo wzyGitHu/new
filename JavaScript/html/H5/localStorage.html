@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btn1" value="存">存</button>
+<button id="btn2" value="取">取</button>
+<button id="btn3" value="删一个">删一个</button>
+<button id="btn4" value="删全部">删全部</button>
+<script>
+    var oBtn1=document.getElementById('btn1');
+    var oBtn2=document.getElementById('btn2');
+    var oBtn3=document.getElementById('btn3');
+    var oBtn4=document.getElementById('btn4');
+
+    oBtn1.onclick=function(){
+        localStorage.setItem("ning",18);
+        localStorage.setItem("de","男");
+        localStorage.setItem("zheng","-_-||")
+    };
+    oBtn2.onclick=function(){
+        localStorage.getItem("ning");
+        localStorage.getItem("de");
+        localStorage.getItem("zheng")
+    };
+    oBtn3.onclick=function(){
+        localStorage.removeItem("ning")
+    };
+    oBtn4.onclick=function(){
+        localStorage.clear()
+    };
+//    共同点：都是用来存储数据的
+//    区别：
+    //    localStorage  本地存储  只要不手动删除它都永久存在  存储数据大
+//    sessionStorage 本地存储 只要关闭页面 就会清空
+//    cookie  也是存储  可以设定过期时间
+
+</script>
+</body>
+</html>

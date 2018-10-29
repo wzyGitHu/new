@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img.img{
+            animation: play infinite linear 2s;
+            -webkit-animation: play infinite linear 2s;
+        }
+        @keyframes play {
+            0%{
+                transform: rotateZ(0deg);
+            }
+            100%{
+                transform: rotateZ(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<img src="images/QQ图片20180724142158.png" alt="">
+
+<audio src="音视频/song.ogg" id="audio" controls="controls" ></audio>
+<script>
+    var oImg=document.getElementsByTagName('img')[0];
+    var oAud=document.getElementById('audio');
+    var flag=true;
+    oImg.onclick=function(){
+        if(flag){
+          oAud.play();
+          oImg.className='img';
+          flag=false;
+      }else{
+          flag=true;
+          oAud.pause();
+          oImg.className='';
+      }
+    }
+</script>
+</body>
+</html>
