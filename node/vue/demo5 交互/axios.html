@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<!--vue-resource  axios出来之后现在该库已经停止更新-->
+<!--安装本地服务器anywhere-->
+<div id="app">
+
+
+</div>
+<!--http,data  跨域-->
+<script type="text/javascript" src="vue.min.js"></script>
+<script type="text/javascript" src="axios.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data(){
+          return{
+              msg:''
+          }
+        },
+        methods:{
+          get(){
+//              axios({
+//                  url:'./1.txt',
+//                  method:'get',
+//                  params:{
+////                      params用来传值  get请求方式
+//                  }
+//              }).then((result)=>{
+//                 this.msg=result
+//              })
+//              axios({
+//                  url:'./1.txt',
+//                  method:'post',
+//                  data:{
+//                      //post请求数据方式
+//                  }
+//              }).then((result)=>{
+//                 this.msg=result
+//              })
+
+//              axios.get("").then()
+//              axios.post("").then()
+//              //发送并发请求
+//              axios.all([""])
+//              //定义自己的位置
+//              axios.create()
+//              //axios  请求拦截器
+//              axios.interceptors.request.use()
+          }
+        },
+        mounted(){
+            this.get()
+        }
+    })
+</script>
+</body>
+</html>

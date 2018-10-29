@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../demo5%20交互/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <button v-on:click="show">弹出</button>
+    <div>{{title}}</div>
+</div>
+<script>
+   new Vue({
+       el:'#app',
+       data(){
+           return{
+               title:'sadf'
+           }
+       },
+       methods:{
+           show(){
+               this.title = "标题"
+           }
+       }
+   })
+</script>
+</body>
+</html>

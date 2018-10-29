@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../demo5%20交互/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <!--<div style="width: 100px;height: 100px;background: red;" v-red> </div>-->
+    <input type="text" v-dbounce="search">
+    {{count}}
+</div>
+<script>
+    //钩子函数 inserted  bind  componentupdate   update
+    Vue.directive("dbounce", {
+        //被绑定元素插入父节点时调用（父节点存在即可调用，不必存在于 document 中)
+        inserted(el,binding){
+            let timer;
+            el.addEventListener("keyup",()=>{
+                if(timer){
+                    clearInterval(timer);
+                }
+                timer=setTimeout(()=>{
+                        binding.value();
+                    },500)
+            })
+        }
+    });
+    new Vue({
+        el: '#app',
+        data: {
+            count: 1
+        },
+        methods: {
+            search(){
+                this.count++
+            }
+        }
+    })
+</script>
+</body>
+</html>

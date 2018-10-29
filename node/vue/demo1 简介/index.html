@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Vue 测试实例 - 菜鸟教程(runoob.com)</title>
+    <script src="../demo5%20交互/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <input type="text" v-model="value">
+    {{value}}
+</div>
+
+
+
+<script>
+   new Vue({
+       el:'#app',
+       data:{
+           value:'asdfbn'
+       }
+   })
+</script>
+</body>

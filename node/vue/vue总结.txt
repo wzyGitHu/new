@@ -1,0 +1,83 @@
+vue是什么？
+前端渐进式框架  vm
+vue的优点？
+模块化  组件化  mvvm   速度快  双向数据绑定
+vue的特点？
+单页面应用  mvvm
+单页面应用的缺点？
+不利于SEO的优化
+如何对单页面应用进行优化？
+1.针对路由组件进行懒加载   js中图片懒加载lazyload插件
+2.针对第三方插件进行cdn加载    animate.css
+3.<template></template><script><?script><style><?style>  按顺序写
+指令
+v-model   object.defineprety()
+v-for  循环数组或对象 （item,index）  报错后：   :key="index"
+v-show   display  none和block转换  dom节点存在
+v-if    visibility:hidden    dom节点不存在
+v-else-if
+v-else
+v-on   事件绑定    简写：@
+v-bind   动态绑定   简写   ：
+:class     绑定值方式：  字符串  对象  数组
+：style     对象  动态去计算
+v-html   解析html标签
+v-text   解析文本
+v-cloak  防止页面闪烁
+:href 
+:src
+事件
+普通事件    click  mouseover  mouseout ...
+事件修饰符  .stop：阻止事件冒泡  .prevent  阻止默认事件   .sync  异步
+按键修饰符  .enter   .space空格  .left  .up .right .down  .tab .esc  .13
+自定义指令
+directive("red",function(){})   directive("red",{})
+自定义指令钩子函数
+bind
+inserted
+update
+upbind
+componentUpdate
+自定义过滤器
+filter("",function(){})
+组件   避免：防止出现关键字
+全剧组件
+component("组件名称",{})
+局部组件
+components:{
+    "组件名称"：{
+
+    }
+}
+组建通信
+父子  props
+子父  $emit
+同级组件  bus
+生命周期
+beforecreate（）{}
+cerated(){}
+beforeMount(){}
+mounted(){}
+beforeUpdate(){}
+updated(){}
+beforeDestroy()
+destoryed()
+交互
+vue-resouce   axios post  data get params  拦截器   Vue.prototype.名
+路由
+配置：index.js
+1.引入 vue-router   使用  vue-router  Vue.use(vue-router)
+2.new VueRouter({})  mode:hash  history   base:__dirname  routes
+3.显示路由  路由容器 <router-view></router-view>
+4.路径跳转  path===<router-link to="">
+5.动态路由  path:"/home:id"  $route.params.id   $route.query.key(对象)
+6.导航守卫
+全局导航守卫   beforeEach   afterEach
+路由导航内置守卫   beforeRouteEnter   beforeRouteUpdate   beforeRouteLeave
+独享守卫   beforeEnter
+vuex
+vuex是什么？
+
+state  mutation   getter   action   moudle
+动画
+transtion

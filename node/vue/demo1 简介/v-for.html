@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../demo5%20交互/vue.min.js"></script>
+</head>
+<body>
+    <div class="app">
+        <ul>
+            <li v-for="(item,index) in arr" :key="index">{{item}}{{index}}</li><!--:key="index"  解决报错-->
+        </ul>
+    </div>
+    <script>
+        new Vue({
+            el:'.app',
+            data(){
+                return{
+                    arr:[1,2,3,4,5,6]
+                }
+            }
+        })
+    </script>
+</body>
+</html>

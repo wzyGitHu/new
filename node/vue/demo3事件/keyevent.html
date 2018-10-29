@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../demo5%20交互/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <!--<button @keydown.enter="show">按下enter</button>-->
+    <!--<button @keydown.13="show">按下enter</button>-->
+    <button @keydown.left="left">left</button>
+    <button @keydown.up="up">up</button>
+    <button @keydown.tab="tab">tab</button>
+    <button @keydown.down="down">down</button>
+    <button @keydown.space="space">space</button>
+</div>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+
+        },
+        methods:{
+            left(){
+                console.log("left")
+            },
+            up(){
+                console.log("up")
+            },
+            tab(){
+                console.log("tab")
+            },
+            down(){
+                console.log("down")
+            },
+            space(){
+                console.log("space")
+            }
+        }
+    })
+</script>
+</body>
+</html>

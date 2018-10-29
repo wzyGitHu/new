@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../demo5%20交互/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <div style="width: 100px;height: 100px;background: red;" v-red> </div>
+</div>
+<script>
+    //钩子函数 inserted  bind  componentupdate   update
+    Vue.directive("red",{
+        //bind  只调用一次，指令第一次绑定到元素上
+        bind:function(){
+            console.log(arguments)
+        },
+        //inserted  被绑元素插入到父节点是被调用
+        inserted(){
+
+        },
+        //componentUpdated 指令所在组件Vnode全部更新完成后调用
+        componentUpdated(){
+
+        },
+        //所在元素更新时被调用
+        update(){
+
+        },
+        //元素解绑是被调用
+        unbind(){
+
+        }
+    });
+    new Vue({
+        el:'#app',
+        data:{
+
+        },
+        methods:{
+
+        }
+    })
+</script>
+</body>
+</html>

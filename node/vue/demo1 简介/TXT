@@ -1,0 +1,86 @@
+火：中文文档 上手快 学习成本低
+vue
+前端渐进式框架
+框架：完整体系，既有功能同时具备UI
+库：功能的统一性
+插件：仅复制某一功能
+vue特点？
+mvvm  m model 模型  v view    vm  数据和视图交互
+双向数据绑定  v-model
+组件化
+
+安装vue2.0脚手架
+npm install vue-cli  -g
+创建项目
+vue init webpack newsystem
+webpack是建立项目的模板名称 newsystem是项目名称
+
+vue build 秘钥 选择第一个
+vue  init <template> <template-name>
+template 六种：
+webpack
+webpack-simple
+simple
+pwa
+browerify
+browerify-simple
+
+cd template-name
+npm run dev 启动项目
+
+应用场景
+单页面应用
+缺点：不利于SEO优化，不便于大型项目的编写
+
+v-model  双向数据绑定   {{}}插值表达式
+双向数据绑定的原理：
+object.definePropety()底层实现
+getter()设置  setter()赋值运算  通过这两种实现底层的设置和赋值运算
+js中的循环
+
+事件分为：
+1.普通事件
+2.事件修饰符
+3.按键修饰符
+
+v-for循环
+v-text解析文本
+v-html解析网页标签
+v-on  事件
+v-bind绑定（属性）
+v-cloak 防止页面闪烁
+模板字符串的优缺点
+mock.js  //预习  前后端分离
+easy mack   写接口
+账户:easy-wqwq
+密码：1099537868ye..
+chlers  抓包
+cmd
+cd.. 退一级
+cd els 清空
+<!--vue-resource  axios出来之后现在该库已经停止更新-->
+<!--安装本地服务器anywhere-->
+<!--http,data  跨域-->
+
+
+<script>
+export default {
+  name: 'App'
+}
+</script>抛出的意思
+<template>
+  <div id="app">
+    <img src="./assets/logo.png">
+    <router-view/>
+  </div>
+</template>  直接写会报错，写一个根元素
+
+vuex是什么
+是一种数据状态管理模式
+应用场景：管理vue中的数据
+方法：
+state
+mutation
+getters
+actions
+module

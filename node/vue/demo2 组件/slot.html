@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../demo5%20交互/vue.min.js"></script>
+</head>
+<body>
+<!--//slot  插槽  相当于一个模板 div会覆盖p，加上slot会给p占一个位置  这是单个slot-->
+<!----具名slot 作用域  slot-scope ---->
+<div id="app">
+    <custem>
+        <p>adsfg</p>
+        <!--<div slot="header">asdrj</div>-->
+        <ul>
+            <li>qwer</li>
+        </ul>
+    </custem>
+</div>
+<script>
+    Vue.component("custem",{
+       template:`
+       <div>
+       我是子元素
+       <slot></slot>
+       <!--<slot name="header"></slot>-->
+       </div>
+       `
+    });
+    new Vue({
+        el:'#app',
+        data(){
+            return{
+
+            }
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../demo5%20交互/vue.min.js"></script>
+    <style>
+        .title{
+            width: 100px;
+            height: 100px;
+            background: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <div :style="{ fontSize: size + 'px' }"  v-bind:class="{title}">的发生大幅度放危废</div><!---字符串---->
+    <!--<div v-bind:class="{'class-a':isA,'class-b':isB}"></div>&lt;!&ndash;-布尔值的绑定方式&#45;&#45;&ndash;&gt;-->
+    <!--<div v-bind:class="[title]"></div>&lt;!&ndash;-对象&#45;&#45;&ndash;&gt;-->
+
+</div>
+<script>
+    //------1
+    new Vue({
+        el:'#app',
+        data(){
+            return{
+                title:true,
+                size:20,
+                col:yellow
+            }
+        }
+    })
+    //------2
+//    new Vue({
+//        el:'#app',
+//        data:{
+//            isA:true,
+//            isB:true
+//        }
+//    })
+    //------3
+//    new Vue({
+//        el:'#app',
+//        data(){
+//            return{
+//                title:"class-a"
+//            }
+//        }
+//    })
+</script>
+</body>
+</html>

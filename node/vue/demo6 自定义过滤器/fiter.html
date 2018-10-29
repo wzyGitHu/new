@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../demo5%20交互/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <!--<div>{{msg |uppercase}}</div>&lt;!&ndash;|uppercase  管道通配符&ndash;&gt;-->
+    <!--<input type="text" v-mode="focus">-->
+<div>{{msg|reverse}}</div>
+</div>
+<script>
+
+//    Vue.filter("uppercase",function(el){
+//        return el.toUpperCase()
+//    });
+//    Vue.directive("mode",{
+//        inserted(el){
+//            el.focus()
+//        }
+//    });
+Vue.filter("reverse",function(el){
+   return el.split("").reverse().join("")
+});
+    new Vue({
+        el: '#app',
+        data: {
+            msg:"Hello World"
+        },
+        methods:{
+
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../demo5%20交互/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <button v-on:click="hide">显示</button>
+    <!--<div style="width: 100px;height: 100px;background: yellowgreen" v-show="show"></div>-->
+    <div style="width: 100px;height: 100px;background: yellowgreen" v-else="show"></div>
+</div>
+<script>
+    new Vue({
+       el:'#app',
+        data:{
+            show:false
+        },
+        methods:{
+            hide:function(){
+                this.show=!this.show
+            }
+        }
+    })
+</script>
+</body>
+</html>

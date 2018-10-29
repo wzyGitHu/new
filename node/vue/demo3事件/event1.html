@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../demo5%20交互/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <div style="width: 200px;height: 200px;background: yellowgreen" @click="a">
+        <div style="background: yellow;width: 100px;height: 100px" @click="b">
+            <div style="background: red;width: 50px; height: 50px;" @click.stop="c"></div>
+        </div>
+    </div>
+</div>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+
+        },
+        methods:{
+            a(){
+                console.log("a")
+            },
+            b(){
+                console.log("b")
+            },
+            c(ev){
+                //            阻止事件冒泡
+
+                var ev=ev||event;
+//                ev.stopPropagation(); js jq
+               // ev.cancelBubble = true                   js
+                console.log("c")
+            }
+        }
+    })
+</script>
+</body>
+</html>

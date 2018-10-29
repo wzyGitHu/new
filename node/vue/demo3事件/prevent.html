@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../demo5%20交互/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+<button @contextmenu.prevent="show">右击阻止默认事件（prevent）</button>
+</div>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+
+        },
+        methods:{
+        show(){
+            alert(1)
+        }
+        }
+    })
+</script>
+</body>
+</html>

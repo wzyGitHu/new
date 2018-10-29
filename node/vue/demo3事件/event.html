@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../demo5%20交互/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <button v-on:mouseover="show1">移入</button>
+    <button v-on:mouseout="show2">移出</button>
+    <button v-on:mouseenter="show3">移入</button>
+    <button v-on:mouseleave="show4">离开</button>
+    <button v-on:mousemove="show5">移动</button>
+    <button v-on:mousedown="show6">按下</button>
+    <button v-on:mouseup="show7">抬起</button>
+    <button v-on:dblclick="show8">双击</button>
+</div>
+<script>
+    new Vue({
+        el:'#app',
+        methods:{
+            show1(){
+                console.log("移入")
+            },
+            show2(){
+                console.log("移出")
+            },
+            show3(){
+                console.log("移入")
+            },
+            show4(){
+                console.log("离开")
+            },
+            show5(){
+                console.log("移动")
+            },
+            show6(){
+                console.log("按下")
+            },
+            show7(){
+                console.log("抬起")
+            },
+            show8(){
+                console.log("双击")
+            }
+
+        }
+    })
+</script>
+</body>
+</html>

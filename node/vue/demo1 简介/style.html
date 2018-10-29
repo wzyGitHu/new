@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../demo5%20交互/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <div :style="win" v-bind:class="b?title:green"></div>
+</div>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            title:{
+                b:true,
+                title:"title",
+                green:"green"
+            },
+            win:{
+                width:document.documentElement.clientWidth+'px',
+                height:document.documentElement.clientHeight+'px',
+                background:'yellow'
+            }
+        }
+    })
+</script>
+</body>
+</html>

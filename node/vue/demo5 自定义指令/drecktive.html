@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../demo5%20交互/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <div style="width: 100px;height: 100px;background: red;" v-red> </div>
+</div>
+<script>
+    //钩子函数 inserted  bind  componentupdate   update
+    Vue.directive("red",function(el){
+            el.style.border="5px solid yellow"
+    });
+    new Vue({
+        el:'#app',
+        data:{
+
+        },
+        methods:{
+
+        }
+    })
+</script>
+</body>
+</html>

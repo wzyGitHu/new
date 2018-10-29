@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../demo5%20交互/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <div>{{msg}}</div>
+    <input type="text" v-model="msg">
+</div>
+<script>
+    var app=new Vue({
+        el: '#app',
+        data: {
+            msg:"Hello World"
+        },
+        beforeCreate(){
+            console.group("------brforeCreate------")
+            console.log("%c%s","color:red","el:"+this.$el)
+            console.log("%c%s","color:red","data:"+this.$data)
+            console.log("%c%s","color:red","msg:"+this.msg)
+        },
+        created(){
+            console.group("------created------")
+            console.log("%c%s","color:red","el:"+this.$el)
+            console.log("%c%s","color:red","data:"+this.$data)
+            console.log("%c%s","color:red","msg:"+this.msg)
+        },
+        beforeMount(){
+            console.group("------beforeMount------")
+            console.log("%c%s","color:red","el:"+this.$el)
+            console.log("%c%s","color:red","data:"+this.$data)
+            console.log("%c%s","color:red","msg:"+this.msg)
+        },
+        mounted(){
+            console.group("------mounted------")
+            console.log("%c%s","color:red","el:"+this.$el)
+            console.log("%c%  s","color:red","data:"+this.$data)
+            console.log("%c%s","color:red","msg:"+this.msg)
+        },
+        beforeUpdate(){
+            console.group("------beforeUpdate------")
+            console.log("%c%s","color:red","el:"+this.$el)
+            console.log("%c%s","color:red","data:"+this.$data)
+            console.log("%c%s","color:red","msg:"+this.msg)
+        },
+        updated(){
+            console.group("------updated------")
+            console.log("%c%s","color:red","el:"+this.$el)
+            console.log("%c%s","color:red","data:"+this.$data)
+            console.log("%c%s","color:red","msg:"+this.msg)
+        },
+        beforeDestroy(){
+            console.group("------beforeDestroy------")
+            console.log("%c%s","color:red","el:"+this.$el)
+            console.log("%c%s","color:red","data:"+this.$data)
+            console.log("%c%s","color:red","msg:"+this.msg)
+        },
+        destroyed(){
+            console.group("------destroyed------")
+            console.log("%c%s","color:red","el:"+this.$el)
+            console.log("%c%s","color:red","data:"+this.$data)
+            console.log("%c%s","color:red","msg:"+this.msg)
+        }
+    });
+    app.$destroy()
+</script>
+</body>
+</html>
