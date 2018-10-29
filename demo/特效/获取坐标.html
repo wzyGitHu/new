@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div{
+            width: 300px;
+            height: 300px;
+            background: #00f8ff;
+            position: absolute;
+            left: 100px;
+            top:100px;
+            text-align: center;
+            line-height: 20px;
+        }
+    </style>
+</head>
+<body>
+<div id="div">
+</div>
+<script>
+    var box=document.getElementById('div');
+    box.onmousemove=function(event){
+        event = event||window.event;
+        var boxy=box.offsetTop;
+        var boxx=box.offsetLeft;
+
+        var y=event.clientX-boxy;
+        var x=event.clientY-boxy;
+
+        box.innerHTML="您的鼠标在盒子中的坐标为："+y
+        +"px;<br>您的鼠标在盒子中的x坐标为:"+x+"px;<br>";
+    }
+</script>
+</body>
+</html>

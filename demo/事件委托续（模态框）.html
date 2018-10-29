@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="item1">撒大声地撒</div>
+<div id="item2">萨达按时</div>
+<div id="item3">sad</div>
+<script>
+    var item1=document.getElementById('item1');
+    var item2=document.getElementById('item2');
+    var item3=document.getElementById('item3');
+    function fn(event){
+        var even=event||window.event;
+        var target=even.target||even.srcElement;
+        if(target ==item1){
+            alert("hello item1");
+        }else if(target == item2){
+            alert("hello item2");
+        }else if(target == item3){
+            alert("hello item3");
+        }
+    }
+    addEvent(document,"click",fn)
+</script>
+</body>
+</html>

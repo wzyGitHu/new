@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        #canvas{
+            border: 1px solid #000;
+            display: block;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+<canvas id="canvas">
+    当前浏览器不支持canvas，请更换浏览器以后再重试
+</canvas>
+<script>
+    //首先，找到<canvas>元素
+    var Canvas=document.getElementById('canvas');
+    Canvas.width = 800;
+    Canvas.height = 800;
+    //然后创建context对象（创建绘图环境）
+    var ctx=Canvas.getContext('2d');
+
+    ctx.font="bold 40px Arial";
+    ctx.fillStyle="#f00";
+    ctx.fillText("The weather is good today !",40,100);
+    ctx.fillText("今天天气挺好 ！",40,200);
+
+    ctx.strokeStyle="#00f";
+    ctx.strokeText("The weather is good today !",40,300);
+    ctx.strokeText("今天天气挺好 ！",40,400);
+
+    ctx.strokeStyle="#ff0";
+    ctx.strokeText("The weather is good today !",40,500,300);
+</script>
+</body>
+</html>

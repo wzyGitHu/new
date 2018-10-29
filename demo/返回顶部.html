@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #box{
+            width: 100px;
+            height: 150px;
+            background: red;
+            position: fixed;
+            right: 0;
+            bottom:100px;
+
+            font-size: 20px;
+            text-align: center;
+            line-height: 150px;
+            display: block;
+        }
+        body{
+            height: 10000px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="box">返回顶部</div>
+<script>
+    var oBox=document.getElementById('box');
+    var timer;
+//    window.onscroll=function(){
+//        scrolltop = document.documentElement.scrollTop || document.body.scrollTop;
+//        if(scrolltop<=0){
+//            oBox.style.display='none';
+//        }
+//        else{oBox.style.display='block';
+//    }
+//    }
+    oBox.onclick=function(){
+        var scrolltop = document.documentElement.scrollTop || document.body.scrollTop;
+        timer=setInterval(function(){
+            if(scrolltop<=0){
+                clearInterval(timer)
+            }
+            scrolltop-=1000;
+            document.documentElement.scrollTop = document.body.scrollTop=scrolltop;
+        },30)
+
+
+    }
+</script>
+</body>
+</html>

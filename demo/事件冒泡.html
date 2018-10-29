@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>点击</button>
+<div style="width: 200px;height: 200px;background: yellowgreen;display: none"></div>
+<script>
+    var oBtn=document.getElementsByTagName('button')[0];
+    var oDiv=document.getElementsByTagName('div')[0];
+    /*oDiv.onclick*/oBtn.onclick=function(ev){
+        var oEvent=ev||event;
+        oDiv.style.display='block';
+        oEvent.stopPropagation();
+        try{
+            oEvent.stopPropagation();
+        }catch(e){
+            oEvent.cancelBubble=true;
+        }
+
+    };
+    document.onclick=function(){
+        oDiv.style.display='none';
+    }
+</script>
+</body>
+</html>

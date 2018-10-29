@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .hovertreeinfo {
+            text-align: center;
+        }
+
+        .hovertreeinfo a {
+            color: white;
+        }
+
+        html {
+            background: #e3e4e5;
+            background: linear-gradient(#e83632 20%, #00f8ff 70%);
+        }
+
+        .wrap {
+            width: 200px;
+            height: 200px;
+            margin: 300px auto;
+            position: relative;
+        }
+
+        .cube {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            transform-style: preserve-3d;
+            transform: rotateX(-30deg) rotateY(-80deg);
+            -webkit-animation: rotate 10s infinite linear;
+            animation-timing-function: linear;
+        }
+
+        @-webkit-keyframes rotate {
+        from{transform: rotateX(0deg) rotateY(0deg);}
+        to{transform: rotateX(360deg) rotateY(360deg);}
+        }
+        .cube div {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            transition: all .4s;
+            background:rgba(0,255,0,.3);
+            font-size: 50px;
+            color: white;
+            line-height: 200px;
+            text-align: center;
+
+            border-radius: 30px;
+            border:5px solid #df5000;
+        }
+
+        .cube .out_front {
+            transform: rotateY(0deg) translateZ(100px);
+        }
+        .cube .out_back {
+            transform: rotateY(180deg) translateZ(100px);
+            background: rgba(255,0,0,.3);
+        }
+        .cube .out_left {
+            transform: rotateY(-90deg) translateZ(100px);
+            background: rgba(0,0,255,.3);
+        }
+        .cube .out_right {
+            transform: rotateY(90deg) translateZ(100px);
+            background: rgba(255,0,255,.3);
+        }
+        .cube .out_top {
+            transform: rotateX(90deg) translateZ(100px);
+            background: rgba(255,197,200,.3);
+        }
+        .cube .out_bottom {
+            transform: rotateX(-90deg) translateZ(100px);
+            background: rgba(0,255,255,.3);
+        }
+        .cube span{
+            display: block;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top:50px;
+            left: 50px;
+            background: rgba(255,255,255,.5);
+        }
+
+        .cube .in_front {
+            transform: rotateY(0deg) translateZ(50px);
+        }
+
+        .cube .in_back {
+            transform: rotateY(180deg) translateZ(50px);
+        }
+        .cube .in_left {
+            transform: rotateY(-90deg) translateZ(50px);
+        }
+        .cube .in_right {
+            transform: rotateY(90deg) translateZ(50px);
+        }
+        .cube .in_top {
+            transform: rotateX(90deg) translateZ(50px);
+        }
+        .cube .in_bottom {
+            transform: rotateX(-90deg) translateZ(50px);
+        }
+
+
+        .cube:hover .out_front {
+            transform: rotateY(180deg) translateZ(200px) scale(1.5);
+        }
+        .cube:hover .out_back {
+            transform: rotateY(360deg) translateZ(200px) scale(1.5);
+            background: rgba(255,0,0,.3);
+        }
+        .cube:hover .out_left {
+            transform: rotateY(-270deg) translateZ(200px) scale(1.5);
+            background: rgba(0,0,255,.3);
+        }
+        .cube:hover .out_right {
+            transform: rotateY(270deg) translateZ(200px) scale(1.5);
+            background: rgba(255,0,255,.3);
+        }
+        .cube:hover .out_top {
+            transform: rotateX(270deg) translateZ(200px) scale(1.5);
+            background: rgba(255,197,200,.3);
+        }
+        .cube:hover .out_bottom {
+            transform: rotateX(-270deg) translateZ(200px) scale(1.5);
+            background: rgba(0,255,255,.3);
+        }
+    </style>
+</head>
+<body>
+<div class="hovertreeinfo">
+    <div class="wrap">
+        <div class="cube">
+            <div class="out_front">前面</div>
+            <div class="out_back">后面</div>
+            <div class="out_left">左边</div>
+            <div class="out_right">右边</div>
+            <div class="out_top">上边</div>
+            <div class="out_bottom">下边</div>
+
+            <span class="in_front"></span>
+            <span class="in_back"></span>
+            <span class="in_left"></span>
+            <span class="in_right"></span>
+            <span class="in_top"></span>
+            <span class="in_bottom"></span>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+全选：<input type="button" value="全选" id="ipt1"><br>
+不选：<input type="button" value="不选" id="ipt2"><br>
+反选：<input type="button" value="反选" id="ipt3"><br>
+<div id="Div">
+<input type="checkbox"><br>
+<input type="checkbox"><br>
+<input type="checkbox"><br>
+<input type="checkbox"><br>
+<input type="checkbox"><br>
+<input type="checkbox"><br>
+</div>
+<script>
+    var oIpt1=document.getElementById('ipt1');
+    var oIpt2=document.getElementById('ipt2');
+    var oIpt3=document.getElementById('ipt3');
+    var oDiv=document.getElementById('Div');
+    var aIpt=oDiv.getElementsByTagName('input');
+
+    oIpt1.onclick=function(){
+        for (var i = 0; i < aIpt.length; i++) {
+            aIpt[i].checked=true;
+        }
+    };
+
+    oIpt2.onclick=function(){
+        for (var i = 0; i < aIpt.length; i++) {
+            aIpt[i].checked=false;
+        }
+    };
+
+//    oIpt3.onclick=function(){
+//        for (var i = 0; i < aIpt.length; i++) {
+//            if(aIpt[i].checked==false){
+//                aIpt[i].checked=true;
+//            }else{
+//                aIpt[i].checked=false;
+//
+//            }
+//        }
+//    };
+
+    oIpt3.onclick=function(){
+        for (var i = 0; i < aIpt.length; i++) {
+            aIpt[i].checked=!aIpt[i].checked;
+        }
+    };
+</script>
+</body>
+</html>
