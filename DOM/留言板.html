@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width: 500px;
+            margin: auto;
+            border: 1px solid black;
+            padding: 20px;
+        }
+        .box textarea{
+            width: 400px;
+        }
+        .box li{
+            width: 440px;
+            line-height:30px;
+            border-bottom: 1px dashed #ccc;
+        }
+        .box li a{
+            float: right;
+        }
+    </style>
+</head>
+<body>
+<div id="box" class="box">
+    <label for="">请输入</label>
+    <textarea name="" id="text" cols="30" rows="10"></textarea>
+   <button id="btn">发送</button>
+    <ul id="ul">
+
+    </ul>
+
+    <script>
+        var oBtn=document.getElementById("btn");
+        var oText=document.getElementById("text");
+        var oUl=document.getElementById("ul");
+        oBtn.onclick=function() {
+            var val = oText.value;
+            var oLi = document.createElement('li');
+            oLi.innerHTML = val + '<a href="#">删除';
+            if(oText.value=="煞笔"){
+                alert("sda")
+                return
+            }
+            if (oUl.children.length == 0) {
+                oUl.appendChild(oLi)
+            }else {
+                oUl.insertBefore(oLi, oUl.children[0])
+            };
+            oText.value='';
+
+        }
+        var a=document.getElementsByTagName('a');
+        for (var i = 0; i < a.length; i++) {
+            a[i].onclick=function(){
+                oUl.removeChild(this.parentNode);
+                return false;//去掉标签的默认行为
+            }
+        }
+    </script>
+</div>
+</body>
+</html>

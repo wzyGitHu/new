@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="ul">
+    <li>sadas<span>删除</span></li>
+    <li>sadas<span>删除</span></li>
+    <li>sadas<span>删除</span></li>
+    <li>sadas<span>删除</span></li>
+    <li>sadas<span>删除</span></li>
+</ul>
+<script>
+    //删除节点
+    oUl=document.getElementById('ul');
+    aLi=oUl.getElementsByTagName('li');
+    aSpan=oUl.getElementsByTagName('span');
+    for (var i = 0; i <aSpan.length; i++) {
+        aSpan[i].onclick=function(){
+            oUl.removeChild(this.parentNode)
+        }
+    }
+</script>
+</body>
+</html>
